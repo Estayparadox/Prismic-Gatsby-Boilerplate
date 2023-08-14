@@ -18,8 +18,9 @@ export const Seo = ({
     return null
   }
 
-  const websiteUrl = "https://www.bar-des-sablettes.fr"
-  const websiteAuthor = "@amateurderhum"
+  const websiteName = "" // Your website name here
+  const websiteUrl = "" // Your website url here
+  const websiteAuthor = "" // Your @ here
 
   const ldjson = {
     "@context": "http://schema.org",
@@ -75,7 +76,7 @@ export const Seo = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description || ''} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Bar Des Sablettes" />
+      <meta property="og:site_name" content={websiteName} />
       <meta property="og:locale" content={"fr"} />
       <meta property="og:url" content={websiteUrl} />
       <meta property="og:image" content={image?.url || ''} />
