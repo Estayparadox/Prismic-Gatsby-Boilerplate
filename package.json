@@ -34,12 +34,12 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --verbose",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "start": "gatsby build && gatsby serve"
+    "serve": "gatsby serve  --verbose",
+    "clean": "gatsby clean  --verbose",
+    "start": "gatsby clean && gatsby build && gatsby serve"
   },
   "repository": {
     "type": "git",
