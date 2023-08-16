@@ -7,6 +7,12 @@ export const Seo = ({
   buildTime,
   image,
   logo,
+}: {
+  description?: string
+  title: string
+  buildTime?: string
+  image?: any
+  logo?: any
 }) => {
   if (!title) {
     return null

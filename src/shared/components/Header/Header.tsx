@@ -2,7 +2,7 @@ import * as React from "react"
 
 import * as S from "./Header.styles"
 
-export const Header = ({ title, logo }) => {
+export const Header = ({ title, logo }: { title: string; logo?: any }) => {
   if (!title) {
     return null
   }
