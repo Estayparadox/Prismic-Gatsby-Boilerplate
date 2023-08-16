@@ -4,7 +4,7 @@ import * as React from "react"
 import { HomepageLayout } from "../templates/HomepageLayout"
 import { Seo } from "../shared/components/Seo"
 
-const IndexPage = ({ data }: { data: any }) => {
+const IndexPage = ({ data }) => {
   if (!data) {
     return null
   }
@@ -23,7 +23,7 @@ const IndexPage = ({ data }: { data: any }) => {
   )
 }
 
-export const Head = ({ data }: { data: any }) => {
+export const Head = ({ data }) => {
   if (!data) {
     return null
   }

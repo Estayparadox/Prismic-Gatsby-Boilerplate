@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-import { Color, FontSize, Spacer } from '../../../shared/constants/constants';
+import { Color, FontSize, Spacer } from '../../constants/constants';
 
 export const Header = styled.div`
   background-color: ${Color.BACKGROUND};
