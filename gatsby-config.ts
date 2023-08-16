@@ -72,8 +72,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.prismic-gatsby-boilerplate.netlify.app",
-        sitemap: `https://www.prismic-gatsby-boilerplate.netlify.app/sitemap-index.xml`,
+        host: `${process.env.WEBSITE_BASE_URL}`,
+        sitemap: `${process.env.WEBSITE_BASE_URL}/sitemap-index.xml`,
         policy: [
           {
             userAgent: "*",
@@ -85,13 +85,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "My Website",
-        short_name: "My Website",
+        name: `${process.env.WEBSITE_NAME}`,
+        short_name: `${process.env.WEBSITE_NAME}`,
         start_url: `/`,
         lang: "fr",
-        description: "Discover my Prismic & Gatsby website",
-        background_color: "#000000",
-        theme_color: "#000000",
+        description: `${process.env.WEBSITE_DESCRIPTION}`,
+        background_color: `${process.env.WEBSITE_THEME_COLOR}`,
+        theme_color: `${process.env.WEBSITE_THEME_COLOR}`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
       },
