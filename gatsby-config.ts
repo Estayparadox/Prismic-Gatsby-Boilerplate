@@ -18,9 +18,6 @@ module.exports = {
         generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
       },
     },
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
@@ -48,6 +45,9 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -64,8 +64,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: process.env.WEBSITE_BASE_URL,
-        sitemap: `${process.env.WEBSITE_BASE_URL}/sitemap-index.xml`,
+        host: "https://www.prismic-gatsby-boilerplate.netlify.app",
+        sitemap: `https://www.prismic-gatsby-boilerplate.netlify.app/sitemap-index.xml`,
         policy: [
           {
             userAgent: "*",
@@ -77,13 +77,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: process.env.WEBSITE_NAME,
-        short_name: process.env.WEBSITE_NAME,
+        name: "My Website",
+        short_name: "My Website",
         start_url: `/`,
         lang: "fr",
-        description: process.env.WEBSITE_DESCRIPTION,
-        background_color: process.env.WEBSITE_THEME_COLOR,
-        theme_color: process.env.WEBSITE_THEME_COLOR,
+        description: "Discover my Prismic & Gatsby website",
+        background_color: "#000000",
+        theme_color: "#000000",
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
       },
