@@ -1,48 +1,9 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/197e293d-bd0a-4034-bd2f-18bb4a92e2ea/deploy-status)](https://app.netlify.com/sites/prismic-gatsby-boilerplate/deploys)
+
 # Prismic + Gatsby + Netlify boilerplate
 
-## 🚀 Quick start
+I've been using Prismic and Gatsby for over 3 years now, which has enabled me to create a blog, multiple landing pages and a website with lots of traffic. I felt it was necessary to create this boilerplate project, which would enable me to create an application quickly by going through all the setup stages a little more quickly. I've also added a section on deployment via Netlify, which is quick and easy to use.
 
-1.  **Start developing.**
-
-    ```shell
-    # Add your environement variables in the `.env` following the `.env.sample`
-    cd prismic-gatsby-boilerplate/
-    npm run dev
-    ```
-
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-         ├── components # your components
-         ├── images # local images
-         ├── pages # your pages
-         ├── schemas # your Prismic data schemas
-         ├── shared # constants, styles, components
-         ├── templates # the structures of your pages
-    ├── .gitignore
-    ├── .env.sample
-    ├── .prettierignore
-    ├── .prettierrc
-    ├── gatsby-config.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
-
+All the documentation can be found in the [Wiki section of this project](https://github.com/Estayparadox/prismic-gatsby-boilerplate/wiki).
 
 <a href='https://ko-fi.com/O4O3OBS1D' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
