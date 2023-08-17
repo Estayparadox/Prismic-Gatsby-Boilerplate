@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-import { Spacer } from '../../constants/constants';
+import { Color, Spacer } from '../../constants/constants';
 
 export const Footer = styled.div`
   display: flex;
@@ -10,6 +10,7 @@ export const Footer = styled.div`
 `;
 
 export const Link = styled.a`
-  margin-left: ${Spacer.S};
+  margin-left: ${Spacer.XS};
   text-decoration: underline;
+  color: ${Color.WHITE}
 `;

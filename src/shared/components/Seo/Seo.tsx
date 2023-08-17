@@ -2,34 +2,40 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 
 export const Seo = ({
-  description,
-  title,
   buildTime,
+  description,
+  firstPublicationDate,
   image,
   logo,
+  title,
+  websiteAuthor,
+  websiteBaseUrl,
+  websiteName,
+  websiteThemeColor,
 }: {
-  description?: string
-  title: string
   buildTime?: string
+  description?: string
+  firstPublicationDate?: string
   image?: any
   logo?: any
+  title: string
+  websiteAuthor?: string,
+  websiteBaseUrl?: string,
+  websiteName?: string,
+  websiteThemeColor?: string,
 }) => {
   if (!title) {
     return null
   }
 
-  const websiteName = "" // Your website name here
-  const websiteUrl = "" // Your website url here
-  const websiteAuthor = "" // Your @ here
-
   const ldjson = {
     "@context": "http://schema.org",
     "@type": "WebPage",
-    url: websiteUrl,
+    url: websiteBaseUrl,
     headline: title,
     inLanguage: "fr",
-    mainEntityOfPage: websiteUrl,
-    description: description || '',
+    mainEntityOfPage: websiteBaseUrl,
+    description: description || "",
     name: title,
     author: {
       "@type": "Person",
@@ -39,7 +45,7 @@ export const Seo = ({
       "@type": "Person",
       name: websiteAuthor,
     },
-    copyrightYear: "2023",
+    copyrightYear: new Date().getFullYear(),
     creator: {
       "@type": "Person",
       name: websiteAuthor,
@@ -48,11 +54,11 @@ export const Seo = ({
       "@type": "Person",
       name: websiteAuthor,
     },
-    datePublished: "2023-08-07T09:30:00+01:00",
-    dateModified: buildTime || '',
+    datePublished: firstPublicationDate,
+    dateModified: buildTime || "",
     image: {
       "@type": "ImageObject",
-      url: image?.url || '',
+      url: image?.url || "",
     },
   }
 
@@ -63,39 +69,39 @@ export const Seo = ({
       </Helmet>
       <title>{title}</title>
       <meta charSet="utf-8" />
-      <meta content={description || ''} name="description" />
-      <meta content={image?.url || ''} name="image" />
+      <meta content={description || ""} name="description" />
+      <meta content={image?.url || ""} name="image" />
       <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
       <meta
         content="width=device-width, initial-scale=1, user-scalable=yes"
         name="viewport"
       />
-      <link href={websiteUrl} rel="canonical" />
+      <link href={websiteBaseUrl} rel="canonical" />
 
       {/* OpenGraph */}
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={description || ''} />
+      <meta property="og:description" content={description || ""} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={websiteName} />
       <meta property="og:locale" content={"fr"} />
-      <meta property="og:url" content={websiteUrl} />
-      <meta property="og:image" content={image?.url || ''} />
-      <meta property="og:image:alt" content={image?.alt || ''} />
+      <meta property="og:url" content={websiteBaseUrl} />
+      <meta property="og:image" content={image?.url || ""} />
+      <meta property="og:image:alt" content={image?.alt || ""} />
       <meta property="og:image:width" content="1200" data-react-helmet="true" />
       <meta property="og:image:height" content="627" data-react-helmet="true" />
 
       {/* Icons */}
-      <meta content="#222221" name="msapplication-TileColor" />
-      <meta content="#222221" name="theme-color" />
+      <meta content={websiteThemeColor} name="msapplication-TileColor" />
+      <meta content={websiteThemeColor} name="theme-color" />
       <meta content={logo?.url} name="msapplication-TileImage" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content="@amateurderhum" />
+      <meta name="twitter:creator" content={websiteAuthor} />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description || ''} />
-      <meta content={image?.url || ''} name="twitter:image" />
-      <meta content={image?.alt || ''} name="twitter:image:alt" />
+      <meta name="twitter:description" content={description || ""} />
+      <meta content={image?.url || ""} name="twitter:image" />
+      <meta content={image?.alt || ""} name="twitter:image:alt" />
 
       {/* ld+json */}
       <script type="application/ld+json">{JSON.stringify(ldjson)}</script>
