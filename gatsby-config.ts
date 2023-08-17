@@ -24,7 +24,7 @@ module.exports = {
         isTSX: true,
         jsxPragma: `jsx`,
         allExtensions: true,
-      }
+      },
     },
     {
       resolve: `gatsby-omni-font-loader`,
@@ -67,6 +67,31 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: false,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: ["/404", "/preview"],
+        query: `
+              {
+                allSitePage {
+                  nodes {
+                    path
+                  }
+                }
+              }`,
+        resolveSiteUrl: () => process.env.WEBSITE_BASE_URL,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+          }
+        },
       },
     },
     {
