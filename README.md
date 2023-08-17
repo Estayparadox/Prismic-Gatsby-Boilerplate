@@ -1,4 +1,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/197e293d-bd0a-4034-bd2f-18bb4a92e2ea/deploy-status)](https://app.netlify.com/sites/prismic-gatsby-boilerplate/deploys)
+![Netlify](https://img.shields.io/netlify/197e293d-bd0a-4034-bd2f-18bb4a92e2ea)
+![GitHub language count](https://img.shields.io/github/languages/top/estayparadox/prismic-gatsby-boilerplate)
+![GitHub](https://img.shields.io/github/license/estayparadox/prismic-gatsby-boilerplate)
+
 
 # Prismic + Gatsby + Netlify boilerplate
 
