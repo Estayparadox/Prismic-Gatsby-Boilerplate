@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "prismic-gatsby-boilerplate",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple starter to get up and developing quickly with Gatsby, Prismic and Netlify.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Joseph Pereniguez <joseph.pereniguez@outlook.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "dotenv": "^16.3.1",
