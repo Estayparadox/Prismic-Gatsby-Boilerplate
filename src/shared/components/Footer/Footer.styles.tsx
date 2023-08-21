@@ -12,5 +12,5 @@ export const Footer = styled.div`
 export const Link = styled.a`
   margin-left: ${Spacer.XS};
   text-decoration: underline;
-  color: ${Color.WHITE}
+  color: ${Color.WHITE};
 `;

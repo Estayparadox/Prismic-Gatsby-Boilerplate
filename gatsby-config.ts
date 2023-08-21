@@ -1,6 +1,6 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env`,
-})
+});
 
 /**
  * @type {import('gatsby').GatsbyConfig}
@@ -49,7 +49,7 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         schemas: {
           // list of Prismic document schemas
-          homepage: require("./src/schemas/homepage.json"),
+          homepage: require('./src/schemas/homepage.json'),
         },
       },
     },
@@ -70,9 +70,9 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        excludes: ["/404", "/preview"],
+        excludes: ['/404', '/preview'],
         query: `
               {
                 allSitePage {
@@ -84,25 +84,25 @@ module.exports = {
         resolveSiteUrl: () => process.env.WEBSITE_BASE_URL,
         resolvePages: ({ allSitePage: { nodes: allPages } }) => {
           return allPages.map(page => {
-            return { ...page }
-          })
+            return { ...page };
+          });
         },
         serialize: ({ path }) => {
           return {
             url: path,
-          }
+          };
         },
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: `${process.env.WEBSITE_BASE_URL}`,
         sitemap: `${process.env.WEBSITE_BASE_URL}/sitemap-index.xml`,
         policy: [
           {
-            userAgent: "*",
-            allow: "/",
+            userAgent: '*',
+            allow: '/',
           },
         ],
       },
@@ -113,7 +113,7 @@ module.exports = {
         name: `${process.env.WEBSITE_NAME}`,
         short_name: `${process.env.WEBSITE_NAME}`,
         start_url: `/`,
-        lang: "fr",
+        lang: 'fr',
         description: `${process.env.WEBSITE_DESCRIPTION}`,
         background_color: `${process.env.WEBSITE_THEME_COLOR}`,
         theme_color: `${process.env.WEBSITE_THEME_COLOR}`,
@@ -122,4 +122,4 @@ module.exports = {
       },
     },
   ],
-}
+};
