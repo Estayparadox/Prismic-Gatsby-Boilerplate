@@ -1,35 +1,31 @@
-import { graphql } from "gatsby"
-import * as React from "react"
+import { graphql } from 'gatsby';
+import * as React from 'react';
 
-import { HomepageLayout } from "../templates/HomepageLayout"
-import { Seo } from "../shared/components/Seo"
+import { HomepageLayout } from '../templates/HomepageLayout';
+import { Seo } from '../shared/components/Seo';
 
-const IndexPage = ({ data }: { data: any }) => {
-  if (!data) {
-    return null
-  }
-
+const IndexPage = ({ data }) => {
   const {
     title: { text: title },
     meta_logo: metaLogo,
-  } = data?.homepage?.data || []
+  } = data?.homepage?.data || [];
 
-  const logo = metaLogo?.thumbnails?.logo || {}
+  const logo = metaLogo?.thumbnails?.logo || {};
 
   return (
     <HomepageLayout title={title} logo={logo}>
       <></> {/* Components here */}
     </HomepageLayout>
-  )
-}
+  );
+};
 
-export const Head = ({ data }: { data: any }) => {
+export const Head = ({ data }) => {
   if (!data) {
-    return null
+    return null;
   }
 
-  const { buildTime } = data?.site || ""
-  const firstPublicationDate = data?.homepage?.first_publication_date || ""
+  const { buildTime } = data?.site || '';
+  const firstPublicationDate = data?.homepage?.first_publication_date || '';
 
   const {
     meta_title: metaTitle,
@@ -39,11 +35,11 @@ export const Head = ({ data }: { data: any }) => {
     website_name: websiteName,
     website_author: websiteAuthor,
     website_base_url: websiteBaseUrl,
-    website_theme_color: websiteThemeColor
-  } = data?.homepage?.data || ""
+    website_theme_color: websiteThemeColor,
+  } = data?.homepage?.data || '';
 
-  const { seo } = metaImage?.thumbnails || {}
-  const { logo } = metaLogo?.thumbnails || {}
+  const { seo } = metaImage?.thumbnails || {};
+  const { logo } = metaLogo?.thumbnails || {};
 
   return (
     <Seo
@@ -58,10 +54,10 @@ export const Head = ({ data }: { data: any }) => {
       websiteName={websiteName}
       websiteThemeColor={websiteThemeColor}
     />
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const IndexQuery = graphql`
   query Homepage {
@@ -109,4 +105,4 @@ export const IndexQuery = graphql`
       }
     }
   }
-`
+`;

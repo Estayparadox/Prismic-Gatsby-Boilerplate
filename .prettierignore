@@ -2,3 +2,10 @@
 package.json
 package-lock.json
 public
+node_module
+*.css
+*.md
+
+# Ignore artifacts:
+build
+Coverage
