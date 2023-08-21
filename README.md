@@ -1,8 +1,8 @@
 ![GitHub](https://img.shields.io/github/license/estayparadox/prismic-gatsby-boilerplate)
 ![GitHub language count](https://img.shields.io/github/languages/top/estayparadox/prismic-gatsby-boilerplate)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/197e293d-bd0a-4034-bd2f-18bb4a92e2ea/deploy-status)](https://app.netlify.com/sites/prismic-gatsby-boilerplate/deploys)
-![Netlify](https://img.shields.io/netlify/197e293d-bd0a-4034-bd2f-18bb4a92e2ea)
-![GitHub issues](https://img.shields.io/github/issues/estayparadox/prismic-gatsby-boilerplate)
+ [![Maintainability](https://api.codeclimate.com/v1/badges/da00f588dacd8e0c1d5c/maintainability)](https://codeclimate.com/github/Estayparadox/Prismic-Gatsby-Boilerplate/maintainability)
+ ![GitHub issues](https://img.shields.io/github/issues/estayparadox/prismic-gatsby-boilerplate)
 ![GitHub contributors](https://img.shields.io/github/contributors/estayparadox/prismic-gatsby-boilerplate)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/estayparadox/prismic-gatsby-boilerplate/master)
 
