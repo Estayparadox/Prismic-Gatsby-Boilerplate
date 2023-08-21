@@ -4,7 +4,6 @@ about: Suggest an idea for this project
 title: 'New Feature Request'
 labels: 'enhancement'
 assignees: 'estayparadox'
-
 ---
 
 # Is your feature request related to a problem? Please describe.

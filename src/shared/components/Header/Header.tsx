@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from 'react';
 
-import * as S from "./Header.styles"
+import * as S from './Header.styles';
 
-export const Header = ({ title, logo }: { title: string; logo?: any }) => {
+export const Header = ({ title, logo }) => {
   if (!title) {
-    return null
+    return null;
   }
 
   return (
@@ -12,5 +12,5 @@ export const Header = ({ title, logo }: { title: string; logo?: any }) => {
       <S.Logo href={logo?.url} src={logo?.url} alt={logo?.alt} />
       <S.Title>{title}</S.Title>
     </S.Header>
-  )
-}
+  );
+};
