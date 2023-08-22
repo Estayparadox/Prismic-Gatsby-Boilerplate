@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-import { Color, Spacer } from '../../shared/constants/constants';
+import { Color, Spacer } from '../../shared/constants';
 
 export const Layout = styled.div`
   background-color: ${Color.BACKGROUND};

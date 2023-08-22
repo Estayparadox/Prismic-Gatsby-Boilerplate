@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-import { Color, Spacer } from '../../constants/constants';
+import { Color, Spacer } from '../../constants';
 
 export const Footer = styled.div`
   display: flex;
