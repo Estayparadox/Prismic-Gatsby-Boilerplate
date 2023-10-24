@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
-import { HomepageLayout } from '../templates/HomepageLayout';
 import { Seo } from '../shared/components/Seo';
+import { HomepageLayout } from '../templates/HomepageLayout';
 
 const IndexPage = ({ data }) => {
   const {
