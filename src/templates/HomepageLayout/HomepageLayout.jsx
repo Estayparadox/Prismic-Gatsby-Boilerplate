@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Header } from '../../shared/components/Header';
 import { Footer } from '../../shared/components/Footer';
+import { Header } from '../../shared/components/Header';
 
 import '../../shared/styles/common.css';
 import * as S from './HomepageLayout.styles';
